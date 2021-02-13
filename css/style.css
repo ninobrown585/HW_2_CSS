@@ -1,0 +1,311 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* brand color palette */
+  :root {
+    --header-bg-color: black ; 
+    --header-text-color: red ; 
+    --box-shadow-color: orange ; 
+    --main-bg-color: gray ;
+    --pic-hover-color: rgb(124, 24, 218) ;
+    --body-background: rgb(179, 132, 46) ;
+
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--header-bg-color);
+    background-color: var(--main-bg-color);
+    line-height: 1.5;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  
+  header {
+    padding: 15px 6% 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--header-bg-color);
+    box-shadow: 0 5px 35px var(--box-shadow-color);
+  }
+  
+  header h1:hover {
+    color: var(--box-shadow-color);
+    background-color: var(--header-bg-color);
+    padding: 5px 1% 5px 6%;
+    margin: 0;
+    font-size: 4vw;
+    line-height: 1.6;
+    transition: ease-in-out;
+    transform: rotate(20deg);
+    
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: var(--secondary);
+    margin-right: 10px;
+    background-image: linear-gradient(270deg, var(--main-bg-color) 0%, var(--box-shadow-color) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: bottom;
+    transition: all 0.25s ease-in;
+    font-size: 1.4rem;
+  }
+  
+  nav a:hover {
+    background-size: 100% 100%;
+    color: var(--header-bg-color);
+  }
+  
+  nav a:last-child {
+    margin-right: 0;
+  }
+  
+  main {
+    margin-top: 20px;
+    margin-bottom: 45px;
+  }
+  
+  .cool-banner {
+    background: rgb(68, 88, 120);
+    background-image: url("../images/02-hero-bg.jpg"), linear-gradient(180deg, var(--header-text-color) 0%, var(--box-shadow-color) 100%);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: soft-light;
+    min-height: 30vh;
+    color: var(--light);
+    padding: 2% 6%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+  }
+  
+  .cool-banner div:hover {
+    flex: 0 0 90%;
+    transition: ease-in-out;
+    transform: rotate(-20deg);
+  }
+  
+  .cool-banner h2 {
+    background-color: var(--header-bg-color);
+    color: var(--box-shadow-color);
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 2.3rem;
+    line-height: .8;
+    display: inline;
+    
+  }
+  
+  .wrap-it-up {
+    max-width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .ProjectsRus {
+    margin: 25px 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+  
+  .ProjectsRus > h2 {
+    flex: 0 0 20%;
+    text-align: right;
+    padding-right: 15px;
+    border-right: 4px solid var(--box-shadow-color);
+    font-size: 4vw;
+    line-height: 1.1;
+  }
+  
+  .ProjectsRus > div {
+    flex: 0 0 77%;
+  }
+  
+  .ProjectsRus p {
+    margin-bottom: 20px;
+  }
+  
+  .flex-Project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 20%;
+    width: 60%;
+    
+  }
+  
+  .flex-item {
+    border: 5px solid var(--header-bg-color);
+    background-color: var(--pic-hover-color);
+    color: var(--header-bg-color);
+    min-height: 150px;
+    max-height: 150px;
+    flex-basis: calc(50% - 1em);
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 20px 0;
+    margin: 0.5em;
+    text-decoration: none;
+    background-blend-mode: soft-light;
+    background-size: 150%;
+    transition: all 0.5s;
+    font-size: 0.9rem;
+  }
+  
+  /* feature first portfolio item */
+  .flex-item:first-child {
+      min-height: 400px;
+      flex-basis: 100%;
+  }
+  
+  .flex-item:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .flex-item div {
+    background-color: var(--main-bg-color);
+    padding: 8px 10px;
+  }
+  
+  .flex-item h3 {
+    font-size: 1.6rem;
+  }
+  
+  .contact address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .contact address a {
+    color: var(--tertiary);
+    padding: 5px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-style: normal;
+    background-image: linear-gradient(270deg, var(--box-shadow-color) 0%, var(--box-shadow-color) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: bottom;
+    transition: all 0.25s ease-in;
+    margin: 0 0.2rem 0.1rem;
+    display: inline-block;
+  }
+  
+  .contact address a:hover {
+    background-size: 100% 88%;
+    color: var(--header-text-color);
+  }
+  
+  /* portfolio project images */
+  .ninja {
+    background-image: url("../HW_2_images/ninja.jpg");
+    
+  }
+  
+  .samauri {
+    background-image: url("../HW_2_images/samauri.jpg");
+  }
+  
+  .monk {
+    background-image: url("../HW_2_images/monk.jpg");
+  }
+  
+  .shogun {
+    background-image: url("../HW_2_images/shogun.jpg");
+  }
+  
+  .Power-Ranger {
+    background-image: url("../HW_2_images/power_Ranger.jpg");
+  }
+  
+  /* end portfolio project images */
+  
+  @media screen and (max-width: 980px) {
+    header {
+      padding: 0 0 10px 0;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    header h1 {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      font-size: 10vw;
+    }
+  
+    header nav {
+      justify-content: center;
+    }
+  
+    .ProjectsRus > h2,
+    .ProjectsRus > div {
+      flex: 0 0 100%;
+    }
+  
+    .ProjectsRus > h2 {
+      border-right: none;
+      border-bottom: 4px solid var(--box-shadow-color);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      text-align: left;
+      font-size: 7vw;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .flex-item,
+    .flex-item:first-child {
+      flex-basis: 100%;
+    }
+  
+    .flex-item:first-child {
+      min-height: 150px;
+    }
+  
+    .cool-banner {
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .contact address {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
