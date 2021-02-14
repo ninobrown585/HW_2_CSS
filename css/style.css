@@ -2,14 +2,15 @@
     box-sizing: border-box;
   }
   
-  /* brand color palette */
+  /* WebPage COlors */
   :root {
     --header-bg-color: black ; 
     --header-text-color: red ; 
     --box-shadow-color: orange ; 
     --main-bg-color: gray ;
-    --pic-hover-color: rgb(124, 24, 218) ;
+    --pic-hover-color: rgb(184, 116, 39) ;
     --body-background: rgb(179, 132, 46) ;
+    --pic-border-color: rgb(154, 115, 161) ; 
 
   }
   
@@ -91,20 +92,25 @@
     margin-top: 20px;
     margin-bottom: 45px;
   }
+
+  .cool-banner  img {
+    position: absolute;
+    margin-block-start: 5%;
+    
+  }
   
-  .cool-banner {
+  .cool-banner  {
     background: rgb(68, 88, 120);
-    background-image: url("../images/02-hero-bg.jpg"), linear-gradient(180deg, var(--header-text-color) 0%, var(--box-shadow-color) 100%);
+    background-image:  linear-gradient(180deg, var(--header-text-color) 0%, var(--box-shadow-color) 100%);
     background-size: cover;
     background-position: center;
     background-blend-mode: soft-light;
-    min-height: 30vh;
-    color: var(--light);
-    padding: 2% 6%;
+    min-height: 160px;
+    padding: 1% 4%;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
-    text-align: right;
+    align-items: flex-start;
+    text-align: left;
   }
   
   .cool-banner div:hover {
@@ -112,13 +118,19 @@
     transition: ease-in-out;
     transform: rotate(-20deg);
   }
+
+  .cool-banner img {
+    display: flex;
+    justify-content: flex-start;
+    height: 100px;
+  }
   
   .cool-banner h2 {
     background-color: var(--header-bg-color);
-    color: var(--box-shadow-color);
-    margin: 0;
+    color: var(--box-shadow-color);  
     padding: 5px 10px;
-    font-size: 2.3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 36px;
     line-height: .8;
     display: inline;
     
@@ -166,8 +178,9 @@
     
   }
   
+  
   .flex-item {
-    border: 5px solid var(--header-bg-color);
+    border: 5px solid var(--pic-border-color);
     background-color: var(--pic-hover-color);
     color: var(--header-bg-color);
     min-height: 150px;
@@ -184,10 +197,11 @@
     font-size: 0.9rem;
   }
   
-  /* feature first portfolio item */
+  
   .flex-item:first-child {
-      min-height: 400px;
-      flex-basis: 100%;
+      min-height: 200px;
+      flex-basis: 65%;
+      
   }
   
   .flex-item:hover {
@@ -197,6 +211,7 @@
   .flex-item div {
     background-color: var(--main-bg-color);
     padding: 8px 10px;
+    z-index: 1000;
   }
   
   .flex-item h3 {
@@ -212,11 +227,11 @@
   }
   
   .contact address a {
-    color: var(--tertiary);
+    color: var(--main-bg-color);
     padding: 5px;
     text-decoration: none;
     font-size: 1.3rem;
-    font-style: normal;
+    font-style: oblique;
     background-image: linear-gradient(270deg, var(--box-shadow-color) 0%, var(--box-shadow-color) 100%);
     background-repeat: no-repeat;
     background-size: 100% 0.2em;
@@ -239,18 +254,22 @@
   
   .samauri {
     background-image: url("../HW_2_images/samauri.jpg");
+    
   }
   
   .monk {
     background-image: url("../HW_2_images/monk.jpg");
+    
   }
   
   .shogun {
     background-image: url("../HW_2_images/shogun.jpg");
+    
   }
   
   .Power-Ranger {
     background-image: url("../HW_2_images/power_Ranger.jpg");
+    
   }
   
   /* end portfolio project images */
@@ -288,7 +307,7 @@
     }
   }
   
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 700px) {
     .flex-item,
     .flex-item:first-child {
       flex-basis: 100%;
