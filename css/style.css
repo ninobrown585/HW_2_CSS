@@ -96,7 +96,7 @@
   .cool-banner  img {
     position: absolute;
     margin-block-start: 5%;
-    
+    float: right;
   }
   
   .cool-banner  {
@@ -199,8 +199,9 @@
   
   
   .flex-item:first-child {
-      min-height: 200px;
-      flex-basis: 65%;
+      min-height: 250px;
+      flex-basis: 100%;
+      min-width: 580px;
       
   }
   
@@ -211,7 +212,9 @@
   .flex-item div {
     background-color: var(--main-bg-color);
     padding: 8px 10px;
-    z-index: 1000;
+    
+    
+    
   }
   
   .flex-item h3 {
